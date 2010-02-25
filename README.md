@@ -11,7 +11,7 @@ Install
 
 New releases of Markview are published to [gemcutter](http://gemcutter.org/gems/markview)
 
-    $ [sudo] gem install markview
+	$ [sudo] gem install markview
 
 Usage
 -----
@@ -20,7 +20,7 @@ Markview is very simple to use. Run the gem from the command line and specify
 the README. Markview is smart enough to find the README if you choose not to
 specify the file.
 
-		$ markview README.md
+	$ markview README.md
 		
 Author
 ------
