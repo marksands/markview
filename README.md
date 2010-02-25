@@ -21,7 +21,9 @@ the README. Markview is smart enough to find the README if you choose not to
 specify the file.
 
 	$ markview README.md
-		
+	
+![Markview Preview](http://img.skitch.com/20100225-gt6h7nqqt281hhx4d1qstu7cqm.png)
+	
 Author
 ------
 
