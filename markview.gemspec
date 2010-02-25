@@ -6,6 +6,7 @@ Gem::Specification.new do |s|
   s.email = "marksands07@gmail.com"
   s.summary = "A markdown viewer that renders on the fly."
   s.homepage = "http://github.com/marksands/markview"
+  s.executables = ["markview"]
   s.files = [
     'README.md',
     'lib/markview.rb',
