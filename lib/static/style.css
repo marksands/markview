@@ -23,7 +23,7 @@ a:hover { text-decoration:underline; }
 
 div#content { margin: 0 auto; position:relative; }
 div#content > div { float:left; }
-div#content div#markdown-output { border:0px solid #999; background:#fff; padding:5% 20%; overflow-y:auto; }
+div#content div#markdown-output { border:1px solid ##E9E9E9; background:#F8F8F8; padding:5% 20%; overflow-y:auto; }
 
 .markdown * {	line-height:1.4em; }
 .markdown em { 	background-color:#fffeca;	padding:0 0.08em;}

@@ -1,18 +1,19 @@
-Gem::Specification.new do |s|
-  s.name = "markview"
-  s.version = "0.0.1"
-  s.date = "2/24/2010"
-  s.authors = ["Mark Sands"]
-  s.email = "marksands07@gmail.com"
-  s.summary = "A markdown viewer that renders on the fly."
-  s.homepage = "http://github.com/marksands/markview"
-  s.executables = ["markview"]
-  s.files = [
-    'README.md',
-    'lib/markview.rb',
-    'lib/static/style.css',
-    'lib/views/base.erb'
+Gem::Specification.new do |gemspec|
+  gemspec.name = "markview"
+  gemspec.summary = "A markdown viewer that renders on the fly."
+  gemspec.description = "A markdown viewer that renders on the fly."
+  gemspec.email = "marksands07@gmail.com"
+  gemspec.homepage = "http://github.com/marksands/markview"
+  gemspec.authors = ["Mark Sands"]
+  gemspec.version = "0.0.1"
+  gemspec.files = [
+   'bin/markview',
+   'lib/markview.rb',
+   'lib/static/style.css',
+   'lib/views/base.erb',
+   'README.md'
   ]
-  s.add_dependency( 'vegas', '>=0.1.4')
-  s.add_dependency( 'rdiscount', '>=1.5.8')
+  gemspec.add_dependency( 'vegas', '>=0.1.4')
+  gemspec.add_dependency( 'sinatra', '>=0.9.4' )
+  gemspec.add_dependency( 'rdiscount', '>=1.5.8')
 end
