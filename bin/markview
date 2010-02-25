@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+begin
+  require 'vegas'
+rescue LoadError
+  require 'rubygems'
+  require 'vegas'
+end
+require File.expand_path(File.dirname(__FILE__) + "/../lib/markview")
+
+Vegas::Runner.new(Markview::Application, 'markview')
