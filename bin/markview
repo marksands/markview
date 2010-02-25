@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+
 begin
   require 'vegas'
 rescue LoadError
@@ -7,4 +8,5 @@ rescue LoadError
 end
 require File.expand_path(File.dirname(__FILE__) + "/../lib/markview")
 
+use Rack::ShowExceptions
 Vegas::Runner.new(Markview::Application, 'markview')
