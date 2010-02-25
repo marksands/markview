@@ -14,7 +14,7 @@ blockquote,q { quotes:"" ""; }
 
 .clear:after { clear:both; content:""; display:block; height:0; zoom:1; }
 
-body { background:#ededed; font-size:15px; }
+body { background:#fff; font-size:15px; }
 body * { line-height:1.4em; }
 body,input,textarea { font-family:HelveticaNeue,'Helvetica Neue',Helvetica,Arial,sans-serif; color:#333; }
 
@@ -23,8 +23,7 @@ a:hover { text-decoration:underline; }
 
 div#content { margin: 0 auto; position:relative; }
 div#content > div { float:left; }
-div#content div#markdown-output { border:1px solid #999; background:#fff; padding:5px; overflow-y:auto; }
-a#toggle-output { font-size:0.8em; position:absolute; bottom:-22px; right:0; }
+div#content div#markdown-output { border:0px solid #999; background:#fff; padding:5% 20%; overflow-y:auto; }
 
 .markdown * {	line-height:1.4em; }
 .markdown em { 	background-color:#fffeca;	padding:0 0.08em;}
