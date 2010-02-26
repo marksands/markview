@@ -17,5 +17,5 @@ class RenderTest < Test::Unit::TestCase
   test "Vegas runs application" do
     Vegas::Runner.new(Markview::Application, 'markview', :foreground => true, :skip_launch => true, :debug => true)
   end
-
+  
 end

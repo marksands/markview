@@ -8,8 +8,8 @@ module Markview
 
     set :views, File.expand_path(File.dirname(__FILE__)) + '/views'
     set :public, File.expand_path(File.dirname(__FILE__)) + '/static'
-
-    def markdown_me
+    
+    def self.markdown_me
       ARGV[0] ||= Dir.glob("*.{md,markdown}")[0]; mdown=""
       begin
         File.open("#{ARGV[0]}", "r") { |f|
@@ -25,7 +25,7 @@ module Markview
     end
 
     get '/' do
-      @markdown = markdown_me
+      @markdown = Markview::Application.markdown_me
       erb :base
     end
   end   
