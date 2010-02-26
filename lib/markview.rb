@@ -28,5 +28,5 @@ module Markview
       @markdown = markdown_me
       erb :base
     end
-  end
+  end   
 end

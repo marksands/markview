@@ -5,7 +5,7 @@ Gem::Specification.new do |gemspec|
   gemspec.email = "marksands07@gmail.com"
   gemspec.homepage = "http://github.com/marksands/markview"
   gemspec.authors = ["Mark Sands"]
-  gemspec.version = "0.0.1"
+  gemspec.version = "0.1.0"
   gemspec.files = [
    'bin/markview',
    'lib/markview.rb',

@@ -21,9 +21,9 @@ body,input,textarea { font-family:HelveticaNeue,'Helvetica Neue',Helvetica,Arial
 a { color:#2e80d3; text-decoration:none; }
 a:hover { text-decoration:underline; }
 
-div#content { margin: 0 auto; position:relative; }
+div#content {margin:2% auto; position:relative; background:#F8F8F8; width:60%; }
 div#content > div { float:left; }
-div#content div#markdown-output { border:1px solid ##E9E9E9; background:#F8F8F8; padding:5% 20%; overflow-y:auto; }
+div#content div#markdown-output { border: 1px solid #E9E9E9; padding:5%; overflow-y:auto; }
 
 .markdown * {	line-height:1.4em; }
 .markdown em { 	background-color:#fffeca;	padding:0 0.08em;}
