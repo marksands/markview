@@ -6,6 +6,7 @@ Gem::Specification.new do |gemspec|
   gemspec.homepage = "http://github.com/marksands/markview"
   gemspec.authors = ["Mark Sands"]
   gemspec.version = "0.1.0"
+  gemspec.executables = ["markview"]
   gemspec.files = [
    'bin/markview',
    'lib/markview.rb',
