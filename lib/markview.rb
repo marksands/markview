@@ -12,7 +12,7 @@ module Markview
     set :static, true
     
     def self.markdown_me
-      ARGV[0] ||= Dir.glob("*.{md,markdown}")[0]; mdown=""
+      ARGV[0] ||= Dir.glob("*.{md,markdown}")[0];
       begin
         RDiscount.new( File.open("#{ARGV[0]}", 'r').read ).to_html
       rescue Errno::ENOENT
