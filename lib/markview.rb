@@ -2,7 +2,6 @@ $:.unshift File.expand_path(File.dirname(__FILE__) + '/lib')
 
 require 'sinatra'
 require 'rdiscount'
-require 'digest/md5'
 
 module Markview
   class Application < Sinatra::Base    
@@ -28,6 +27,3 @@ module Markview
     end
   end   
 end
-
-require 'digest/md5'
-
