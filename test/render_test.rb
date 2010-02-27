@@ -15,7 +15,8 @@ class RenderTest < Test::Unit::TestCase
   end
   
   test "Vegas runs application" do
-    Vegas::Runner.new(Markview::Application, 'markview', :foreground => true, :skip_launch => true, :debug => true)
+    pid = fork { Vegas::Runner.new(Markview::Application, 'markview', :foreground => true, :skip_launch => true, :debug => true) }
+    Process.kill( 'HUP', pid)
   end
   
 end
