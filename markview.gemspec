@@ -12,9 +12,15 @@ Gem::Specification.new do |gemspec|
    'lib/markview.rb',
    'lib/static/style.css',
    'lib/views/base.erb',
-   'README.md'
+   'README.md',
+   'test/render_test.rb'
+  ]
+  gemspec.test_files = [
+    'test/render_test.rb'
   ]
   gemspec.add_dependency( 'vegas', '>=0.1.4')
   gemspec.add_dependency( 'sinatra', '>=0.9.4' )
   gemspec.add_dependency( 'rdiscount', '>=1.5.8')
+  gemspec.add_development_dependency('contest', '>=0.1.2')
+  gemspec.add_development_dependency('turn', '>=0.7.0')
 end
