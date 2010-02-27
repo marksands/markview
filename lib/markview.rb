@@ -2,14 +2,17 @@ $:.unshift File.expand_path(File.dirname(__FILE__) + '/lib')
 
 require 'sinatra'
 require 'rdiscount'
+require 'digest/md5'
 
 module Markview
-  class Application < Sinatra::Base
-    
-    set :views, File.dirname(File.dirname(__FILE__)) + '/markview/views'
-    set :public, File.dirname(File.dirname(__FILE__)) + '/markview/static'
+  class Application < Sinatra::Base    
+    dir = File.dirname(File.expand_path(__FILE__))
+
+    set :views,  "#{dir}/markview/views"
+    set :public, "#{dir}/markview/public"
     set :static, true
     
+    # Renders the html using RDiscount
     def self.markdown_me
       ARGV[0] ||= Dir.glob("*.{md,markdown}")[0];
       begin
@@ -25,3 +28,6 @@ module Markview
     end
   end   
 end
+
+require 'digest/md5'
+
