@@ -6,9 +6,11 @@ require 'rdiscount'
 module Markview
   class Application < Sinatra::Base
 
-    set :views, File.expand_path(File.dirname(__FILE__)) + '/views'
-    set :public, File.expand_path(File.dirname(__FILE__)) + '/static'
-    
+    dir = File.dirname(File.expand_path(__FILE__))
+
+    set :views,  "#{dir}/views"
+    set :public, "#{dir}/static"
+
     def self.markdown_me
       ARGV[0] ||= Dir.glob("*.{md,markdown}")[0]; mdown=""
       begin
