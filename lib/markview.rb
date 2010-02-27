@@ -16,7 +16,7 @@ module Markview
       begin
         RDiscount.new( File.open("#{ARGV[0]}", 'r').read ).to_html
       rescue Errno::ENOENT
-        raise "Failed to load README. Please specify a file."; exit
+        raise LoadError, "Failed open document. Please specify a file."; exit
       end
     end
 

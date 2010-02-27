@@ -14,6 +14,13 @@ class RenderTest < Test::Unit::TestCase
     assert_equal RDiscount.new(File.read(ARGV[0])).to_html, Markview::Application.markdown_me    
   end
   
+  test "no markdown file given or found raises error" do
+    ARGV[0] = "bad_file_name"
+    assert_raises LoadError do
+      Markview::Application.markdown_me
+    end
+  end
+  
   test "Vegas runs application" do
     pid = fork { Vegas::Runner.new(Markview::Application, 'markview', :foreground => true, :skip_launch => true, :debug => true) }
     sleep(1)
