@@ -7,9 +7,10 @@ module Markview
   class Application < Sinatra::Base
 
     dir = File.dirname(File.expand_path(__FILE__))
-
+    
     set :views,  "#{dir}/markview/views"
-    set :public, "#{dir}/markview/static"
+    set :public, "#{dir}/markview/public" 
+    set :static, true
     
     def self.markdown_me
       ARGV[0] ||= Dir.glob("*.{md,markdown}")[0]; mdown=""
