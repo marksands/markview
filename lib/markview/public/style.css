@@ -58,7 +58,7 @@ div#content div#markdown-output { border: 1px solid #E9E9E9; background:#F8F8F8;
 
 .markdown pre{background-color:#f8f8ff;border:1px solid #dedede;color:#444;font-size:90%;line-height:1.5em;margin:0 0 1em;overflow:auto;padding:0.5em}
 .markdown pre code{background-color:#f8f8ff;border:medium none;font-size:100%;padding:0}
-.markdown code{background-color:#f8f8ff;border:1px solid #dedede;color:#444;font-size:90%;padding:0 0.2em}
+.markdown code{font-family: Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono';background-color:#f8f8ff;border:1px solid #dedede;color:#444;font-size:90%;padding:0 0.2em}
 
 .markdown pre.console{background-color:#000;color:white;font-size:90%;line-height:1.5em;margin:0 0 1em;padding:0.5em}
 .markdown pre.console code{background-color:#000;border:medium none;color:#fff;font-size:100%;padding:0}
