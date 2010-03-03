@@ -1,11 +1,11 @@
 Gem::Specification.new do |gemspec|
   gemspec.name = "markview"
-  gemspec.summary = "A markdown viewer that renders on the fly."
-  gemspec.description = "Conveniently launches markdown formatted files in a browser, rendering on the fly."
+  gemspec.summary = "A markup viewer that renders on the fly."
+  gemspec.description = "Conveniently launches practically any markup formatted files in a browser, rendering on the fly."
   gemspec.email = "marksands07@gmail.com"
   gemspec.homepage = "http://github.com/marksands/markview"
   gemspec.authors = ["Mark Sands"]
-  gemspec.version = "0.1.1"
+  gemspec.version = "0.2.0"
   gemspec.executables = ["markview"]
   gemspec.files = [
    'bin/markview',
@@ -20,7 +20,7 @@ Gem::Specification.new do |gemspec|
   ]
   gemspec.add_dependency( 'vegas', '>=0.1.4')
   gemspec.add_dependency( 'sinatra', '>=0.9.4' )
-  gemspec.add_dependency( 'rdiscount', '>=1.5.8')
+  gemspec.add_dependency( 'github-markup', '>=0.2.2')
   gemspec.add_development_dependency('contest', '>=0.1.2')
   gemspec.add_development_dependency('turn', '>=0.7.0')
 end
