@@ -13,7 +13,7 @@ module Markview
         
     # Renders the html using RDiscount
     def self.markdown_me
-      ARGV[0] ||= Dir.glob("README.*")[0]
+      ARGV[0] ||= Dir.glob("README*")[0]
       begin
         GitHub::Markup.render(ARGV[0], File.read(ARGV[0]))
       rescue Errno::ENOENT

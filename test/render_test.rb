@@ -10,7 +10,7 @@ class RenderTest < Test::Unit::TestCase
   end
   
   test "renders discovered file" do
-    ARGV[0] = Dir.glob("README.*")[0]
+    ARGV[0] = Dir.glob("README*")[0]
     assert_equal GitHub::Markup.render(ARGV[0], File.read(ARGV[0])), Markview::Application.markdown_me    
   end
   

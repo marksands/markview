@@ -2,9 +2,9 @@ Markview
 ========
 
 Markview allows you to view nearly any and all markup formatted files in a slick way. Markview is
-inspired by the python library [restview](http://mg.pov.lt/restview/). This gem previously used 
-[Ryan Tomayko](http://github.com/rtomayko)'s [RDiscount](http://github.com/rtomayko/rdiscount) but 
-I've decided to extend markview to render virtually all markup formatted README's or what-have-you.
+inspired by the python library [restview](http://mg.pov.lt/restview/). As of v0.2.0, I've decided 
+to extend markview to render virtually any and all markup formatted README's or what-have-you using 
+the [github-markup](http://github.com/defunkt/github-markup) library.
 
 Install
 -------
