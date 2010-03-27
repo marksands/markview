@@ -2,8 +2,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,
 strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,
 tbody,tfoot,thead,tr,th,td { margin:0; padding:0; border:0; outline:0; 
-	font-weight:inherit; font-style:inherit; font-size:100%; 
-	font-family:inherit; vertical-align:baseline; }
+  font-weight:inherit; font-style:inherit; font-size:100%; 
+  font-family:inherit; vertical-align:baseline; }
 
 body { line-height:1; color:black; background: white; }
 ol,ul { list-style:none; }
@@ -23,7 +23,7 @@ a:hover { text-decoration:underline; }
 
 p#file {font-size:150%;}
 
-div#content {margin:2% auto; position:relative; width:60%; }
+div#content {margin:2% auto; position:relative; width:920px; }
 div#content > div { float:left; }
 div#content div#markview-output { border: 1px solid #E9E9E9; background:#F8F8F8; padding:5%; overflow-y:auto; }
 
