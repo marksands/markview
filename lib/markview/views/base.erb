@@ -6,8 +6,9 @@
 		<link rel="stylesheet" href="/style.css" type="text/css" media="screen" charset="utf-8">
   </head> 
   <body> 
-    <div id="content" class="clear"> 
-      <div id="markdown-output" class="markdown">
+    <div id="content" class="clear">
+			<p id="file"><%= @title %></p>
+      <div id="markview-output" class="markview">
 				<%= @markdown %>
       </div>
     </div>
