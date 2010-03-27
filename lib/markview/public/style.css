@@ -16,7 +16,7 @@ blockquote,q { quotes:"" ""; }
 
 body { background:#fff; font-size:15px; }
 body * { line-height:1.4em; }
-body,input,textarea { font-family:HelveticaNeue,'Helvetica Neue',Helvetica,Arial,sans-serif; color:#333; }
+body,input,textarea { font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; color:#333; }
 
 a { color:#2e80d3; text-decoration:none; }
 a:hover { text-decoration:underline; }
@@ -27,8 +27,9 @@ div#content {margin:2% auto; position:relative; width:60%; }
 div#content > div { float:left; }
 div#content div#markview-output { border: 1px solid #E9E9E9; background:#F8F8F8; padding:5%; overflow-y:auto; }
 
-.markview * {	line-height:1.4em; }
-.markview em { 	background-color:#fffeca;	padding:0 0.08em;}
+.markview * {line-height:1.4em;}
+.markview a {text-decoration:none;}
+.markview em {font-style:italic; padding:0 0.08em;}
 .markview i{font-style:italic}
 .markview strong,.markview b{font-weight:bold}
 .markview abbr{border-bottom:1px dashed;cursor:help}
@@ -51,7 +52,8 @@ div#content div#markview-output { border: 1px solid #E9E9E9; background:#F8F8F8;
 .markview ol li{list-style:decimal}
 
 .markview blockquote{border-left:5px solid #ddd;color:#555;margin:0 0 1em;padding-left:0.6em}
-.markview dt{font-weight:bold;margin-left:1em}.markview dd{margin-bottom:1em;margin-left:2em}
+.markview dt{font-weight:bold;margin-left:1em}
+.markview dd{margin-bottom:1em;margin-left:2em}
 
 .markview table{margin:0 0 1em;width:100%}
 .markview table th{background:#eee;border-bottom:1px solid #bbb;padding:0.2em 1em}

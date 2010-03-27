@@ -5,7 +5,7 @@ Gem::Specification.new do |gemspec|
   gemspec.email = "marksands07@gmail.com"
   gemspec.homepage = "http://github.com/marksands/markview"
   gemspec.authors = ["Mark Sands"]
-  gemspec.version = "0.2.0"
+  gemspec.version = "0.2.1"
   gemspec.executables = ["markview"]
   gemspec.files = [
    'bin/markview',
@@ -21,6 +21,10 @@ Gem::Specification.new do |gemspec|
   gemspec.add_dependency( 'vegas', '>=0.1.4')
   gemspec.add_dependency( 'sinatra', '>=0.9.4' )
   gemspec.add_dependency( 'github-markup', '>=0.2.2')
+  
   gemspec.add_development_dependency('contest', '>=0.1.2')
   gemspec.add_development_dependency('turn', '>=0.7.0')
+  
+  gemspec.rubyforge_project = 'markview'
+  gemspec.rubygems_version = '0.2.1'
 end
