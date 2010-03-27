@@ -6,12 +6,12 @@ class RenderTest < Test::Unit::TestCase
   
   test "renders given file" do
     ARGV[0] = 'README.md'
-    assert_equal RDiscount.new(GitHub::Markup.render(ARGV[0], File.read(ARGV[0]))).to_html, Markview::Application.markdown_me
+    assert_equal GitHub::Markup.render(ARGV[0], File.read(ARGV[0])), Markview::Application.markdown_me
   end
   
   test "renders discovered file" do
     ARGV[0] = Dir.glob("README*")[0]
-    assert_equal RDiscount.new(GitHub::Markup.render(ARGV[0], File.read(ARGV[0]))).to_html, Markview::Application.markdown_me    
+    assert_equal GitHub::Markup.render(ARGV[0], File.read(ARGV[0])), Markview::Application.markdown_me    
   end
   
   test "no markdown file given or found raises error" do
