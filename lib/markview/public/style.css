@@ -23,7 +23,7 @@ a:hover { text-decoration:underline; }
 
 p#file {font-size:150%;}
 
-div#content {margin:2% auto; position:relative; width:60%; }
+div#content {margin:2% auto; position:relative; width:920px; }
 div#content > div { float:left; }
 div#content div#markview-output { border: 1px solid #E9E9E9; background:#F8F8F8; padding:5%; overflow-y:auto; }
 
