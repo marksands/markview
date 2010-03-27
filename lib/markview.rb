@@ -2,6 +2,7 @@ $:.unshift File.expand_path(File.dirname(__FILE__) + '/lib')
 
 require 'sinatra'
 require 'github/markup'
+require 'rdiscount'
 
 module Markview
   class Application < Sinatra::Base    
@@ -15,7 +16,7 @@ module Markview
     def self.markdown_me
       ARGV[0] ||= Dir.glob("README*")[0]
       begin
-        GitHub::Markup.render(ARGV[0], File.read(ARGV[0]))
+        RDiscount.new(GitHub::Markup.render(ARGV[0], File.read(ARGV[0]))).to_html
       rescue Errno::ENOENT
         raise LoadError, "Failed to open document. Please specify a file."; exit
       end
