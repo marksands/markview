@@ -23,7 +23,7 @@ module Markview
 
     get '/' do
       @markdown = Application.markdown_me
-      @title = ARGF.filename.gsub(/(.+\/)?/, '') # /path/to/README.txt => README.txt
+      @title = ARGV[0].gsub(/(.+\/)?/, '') # /path/to/README.txt => README.txt
       erb :base
     end
   end   
