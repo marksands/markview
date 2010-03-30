@@ -15,14 +15,14 @@ class RenderTest < Test::Unit::TestCase
   end
   
   def setup
-    ARGV[0] = 'README.md'
+    @argv = ARGV[0] = 'README.md'
   end
   
   def discover_file
-    ARGV[0] = Dir.glob("README*")[0]
+    @argv = ARGV[0] = Dir.glob("README*")[0]
   end
   
   def bad_file
-    ARGV[0] = "bad_file_name"
+    @argv = ARGV[0] = "bad_file_name"
   end
 end
