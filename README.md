@@ -18,7 +18,7 @@ specify the file.
 	
 ## Preview
 
-![Markview Preview](http://img.skitch.com/20100225-gt6h7nqqt281hhx4d1qstu7cqm.png)
+![Markview Preview](http://img.skitch.com/20100331-pdee3qerwaxpk49w1qnumspnjb.png)
 	
 ## Author
 
