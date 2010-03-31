@@ -5,17 +5,19 @@ Gem::Specification.new do |gemspec|
   gemspec.email = "marksands07@gmail.com"
   gemspec.homepage = "http://github.com/marksands/markview"
   gemspec.authors = ["Mark Sands"]
-  gemspec.version = "0.2.3"
+  gemspec.version = "0.2.4"
   gemspec.executables = ["markview"]
   gemspec.files = [
-   'bin/markview',
-   'lib/markview.rb',
-   'lib/markview/public/style.css',
-   'lib/markview/views/base.erb',
-   'README.md',
-   'test/render_test.rb'
+   	'bin/markview',
+   	'lib/markview.rb',
+   	'lib/markview/public/style.css',
+   	'lib/markview/views/base.erb',
+   	'README.md',
+		'test/test_helper.rb',
+   	'test/render_test.rb'
   ]
   gemspec.test_files = [
+		'test/test_helper.rb',
     'test/render_test.rb'
   ]
   gemspec.add_dependency( 'vegas', '>=0.1.4')
@@ -25,7 +27,8 @@ Gem::Specification.new do |gemspec|
 
   gemspec.add_development_dependency('contest', '>=0.1.2')
   gemspec.add_development_dependency('turn', '>=0.7.0')
+	gemspec.add_development_dependency('rack-test', '>=0.5.3')
   
   gemspec.rubyforge_project = 'markview'
-  gemspec.rubygems_version = '0.2.3'
+  gemspec.rubygems_version = '0.2.4'
 end

@@ -1,6 +1,6 @@
 $LOAD_PATH.unshift File.dirname(File.expand_path(__FILE__)) + '/../lib'
+require File.dirname(File.expand_path(__FILE__)) + '/../lib/markview.rb'
 require 'contest'
-require 'markview'
 require 'rack/test'
 
 class RenderTest < Test::Unit::TestCase

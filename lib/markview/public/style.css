@@ -16,13 +16,13 @@ blockquote,q { quotes:"" ""; }
 
 body { background:#fff; font-size:13px; }
 body * { line-height:1.4em; }
-body,input,textarea { font-family: helvetica, arial, freesans, clean, sans-serif;; color:#333; }
+body,input,textarea { font-family: helvetica, arial, freesans, clean, sans-serif; color:#333; }
 
 p#file {font-size:150%;}
 
 div#content {margin:2% auto; position:relative; width:920px; }
 div#content > div { float:left; }
-div#content div#markview-output { border: 1px solid #E9E9E9; background:#F8F8F8; padding:10px; overflow-y:auto; }
+div#content div#markview-output { border: 1px solid #E9E9E9; background:#F8F8F8; padding:10px; overflow-y:auto; min-width:900px;}
 
 .markview * {line-height:1.4em;}
 .markview a {color:#2e80d3; text-decoration:none;}
@@ -33,13 +33,16 @@ div#content div#markview-output { border: 1px solid #E9E9E9; background:#F8F8F8;
 .markview abbr{border-bottom:1px dashed;cursor:help}
 .markview small{font-size:0.8em}
 
-.markview h1,.markview h2,.markview h3,.markview h4,.markview h5,.markview h6{margin-bottom:0.5em}
-.markview h1{font-size:170%;font-weight:bold}
-.markview h2{font-size:150%;font-weight:bold}
-.markview h3{color:#555;font-size:110%;font-weight:bold}
-.markview h4{color:#777;font-weight:bold}
-.markview h5{color:#777}
-.markview h6{color:#777;font-size:90%}
+.markview h1,.markview h2,.markview h3,.markview h4,.markview h5,.markview h6{margin-bottom:0.5em; color:black;}
+.markview h1{font-size:170% !important; padding-top:0.5em!important;margin-top:1.5em!important;
+	line-height:1.4em; font-weight:bold; border-top: 4px solid #AAA !important; }
+.markview h1:first-child { margin-top:0!important;padding-top:0.25em!important;border-top:none!important;}
+.markview h2{ border-top: 4px solid #ddd; padding-top: 12px; margin-top:30px; margin-bottom:0.75em;}
+.markview h2{font-size:150% !important; font-weight:bold}
+.markview h3{color:black;line-height:1.3em; font-size:1.17em; font-weight:bold; margin-top:1em !important;}
+.markview h4{color:black;line-height:1.4em; font-weight:bold}
+.markview h5{color:black}
+.markview h6{color:black;font-size:90%}
 
 .markview p{line-height:1.5em;margin:0 0 1em}
 
@@ -57,9 +60,13 @@ div#content div#markview-output { border: 1px solid #E9E9E9; background:#F8F8F8;
 .markview table th{background:#eee;border-bottom:1px solid #bbb;padding:0.2em 1em}
 .markview table td{border-bottom:1px solid #ddd;padding:0.2em 1em}
 
-.markview pre{background-color:#f8f8ff;border:1px solid #dedede;color:#444;font-size:90%;line-height:1.5em;margin:0 0 1em;overflow:auto;padding:0.5em}
-.markview pre code{background-color:#f8f8ff;border:medium none;font-size:100%;padding:0}
-.markview code{font-family: Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono';background-color:#f8f8ff;border:1px solid #dedede;color:#444;font-size:90%;padding:0 0.2em}
+.markview pre{font-family: Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+	background-color:#f8f8ff !important;border:1px solid #dedede !important;color:#444 !important; font-size:90% !important;
+	line-height:1.5em !important; padding: 0.5em !important; margin:1em 0 !important; overflow:auto !important;}
+.markview pre code{background-color:#f8f8ff !important;border:none !important;font-size:100% !important;padding:0 !important}
+.markview code{font-family: Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+	background-color:ghostWhite !important;border:1px solid #dedede !important;color:#444 !important; font-size:90%!important;
+	padding:0 0.2em !important}
 
 .markview pre.console{background-color:#000;color:white;font-size:90%;line-height:1.5em;margin:0 0 1em;padding:0.5em}
 .markview pre.console code{background-color:#000;border:medium none;color:#fff;font-size:100%;padding:0}

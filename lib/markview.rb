@@ -1,5 +1,4 @@
 $:.unshift File.expand_path(File.dirname(__FILE__) + '/lib')
-
 require 'sinatra'
 require 'github/markup'
 
@@ -12,7 +11,7 @@ module Markview
     set :static, true
         
     # Renders the html using GitHub::Markup
-    def self.markdown_me
+    def self.markview_me
       ARGV[0] ||= Dir.glob("README*")[0]
       begin
         GitHub::Markup.render(ARGV[0], File.read(ARGV[0]))
@@ -22,7 +21,7 @@ module Markview
     end
 
     get '/' do
-      @markdown = Application.markdown_me
+      @markdown = Markview::Application.markview_me
       @title = ARGV[0].gsub(/(.+\/)?/, '') # /path/to/README.txt => README.txt
       erb :base
     end
