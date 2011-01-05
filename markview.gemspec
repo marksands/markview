@@ -11,6 +11,7 @@ Gem::Specification.new do |gemspec|
    	'bin/markview',
    	'lib/markview.rb',
    	'lib/markview/public/style.css',
+   	'lib/markview/public/app.js',
    	'lib/markview/views/base.erb',
    	'lib/markview/views/layout.erb',
    	'lib/markview/views/edit.erb',

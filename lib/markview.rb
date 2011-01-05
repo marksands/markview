@@ -35,7 +35,14 @@ class Markview < Sinatra::Base
   end
 
   post '/save' do
-    
+    File.open(@@markup, 'w') { |f| f.write(request['markup']) }
+    redirect '/'
+  end
+
+  post '/save_email' do
+    return ({:error => true, :message => "Please enter a valid email address!"}).to_json if request['email'] !~ /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/i
+    File.open('stored_email.txt','a'){|f|f.puts request['email']}
+    ({:error => false, :message => "Thanks for your interest, your email has been saved!"}).to_json
   end
 
 end

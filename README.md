@@ -1,6 +1,6 @@
 # Markview
 
-Markview allows you to view nearly any and all markup formatted files in a slick way. Markview is inspired by the python library [restview](http://mg.pov.lt/restview/). As of v0.2.0, I've decided to extend markview to render virtually any and all markup formatted README's or what-have-you using the [github-markup](http://www.github.com/defunkt/github-markup) library.
+Markview allows you to view nearly any and all markup formatted files in a slick way. Markview is inspired by the python library [restview](http://mg.pov.lt/restview/). Markview has the ability to render virtually any and all markup formatted files using the [github-markup](http://www.github.com/defunkt/github-markup) library.
 
 ## Install
 
@@ -23,3 +23,8 @@ specify the file.
 ## Author
 
 [Mark Sands](http://github.com/marksands) :: marksands07@gmail.com
+  
+  
+  
+  
+  
