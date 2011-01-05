@@ -9,4 +9,4 @@ end
 require File.expand_path(File.dirname(__FILE__) + "/../lib/markview")
 
 use Rack::ShowExceptions
-Vegas::Runner.new(Markview::Application, 'markview', :foreground => true )
+Vegas::Runner.new(Markview, 'markview', :foreground => true )

@@ -24,6 +24,25 @@ div#content {margin:2% auto; position:relative; width:920px; }
 div#content > div { float:left; }
 div#content div#markview-output { border: 1px solid #E9E9E9; background:#F8F8F8; padding:10px; overflow-y:auto; min-width:900px;}
 
+.meta { min-width:910px;}
+.meta	{ background: #eee url(http://assets1.github.com/images/modules/commit/file_head.gif) repeat-x 0px 0px;
+	border:1px solid #e9e9e9;border-bottom:1px solid #ccc;color:#333;height:33px;line-height:33px;font-size:12px;padding:0px 5px; }
+.meta ul { float:right;height:33px;line-height:33px;padding:0;margin:0; }
+.meta ul li { float:left;	list-style-type:none; margin: 8px 0 0 10px; }
+.meta ul li.last { background: url(http://assets1.github.com/images/modules/commit/action_separator.png) no-repeat 0px 50%; margin: 8px 4px 0 10px; }
+.meta ul li a {	color:#4183C4;font-weight:bold;	text-decoration:none;outline:none;line-height:1.4em;margin:0 0 0 10px;}
+
+textarea {
+  width: 99%;
+  height: 600px!important;
+	padding:0!important;
+	margin:0!important;
+  resize: none;
+  font-size: 1.1em;
+  background-color: rgb(253, 253, 253);
+  border: 2px solid rgb(215, 214, 213);
+}
+
 .markview * {line-height:1.4em;}
 .markview a {color:#2e80d3; text-decoration:none;}
 .markview a:hover { text-decoration:underline;}

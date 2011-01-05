@@ -1,17 +1,19 @@
 Gem::Specification.new do |gemspec|
   gemspec.name = "markview"
-  gemspec.summary = "A markup viewer that renders on the fly."
-  gemspec.description = "Conveniently launches practically any markup formatted files in a browser, rendering on the fly."
+  gemspec.summary = "A markup viewer that renders on the fly in your browser."
+  gemspec.description = "Coneveniently renders and launches any markup formatted file within your browser."
   gemspec.email = "marksands07@gmail.com"
   gemspec.homepage = "http://github.com/marksands/markview"
   gemspec.authors = ["Mark Sands"]
-  gemspec.version = "0.2.4"
+  gemspec.version = "0.3.0"
   gemspec.executables = ["markview"]
   gemspec.files = [
    	'bin/markview',
    	'lib/markview.rb',
    	'lib/markview/public/style.css',
    	'lib/markview/views/base.erb',
+   	'lib/markview/views/layout.erb',
+   	'lib/markview/views/edit.erb',
    	'README.md',
 		'test/test_helper.rb',
    	'test/render_test.rb'
@@ -30,5 +32,5 @@ Gem::Specification.new do |gemspec|
 	gemspec.add_development_dependency('rack-test', '>=0.5.3')
   
   gemspec.rubyforge_project = 'markview'
-  gemspec.rubygems_version = '0.2.4'
+  gemspec.rubygems_version = '0.3.0'
 end

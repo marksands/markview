@@ -1,29 +1,42 @@
 $:.unshift File.expand_path(File.dirname(__FILE__) + '/lib')
 require 'sinatra'
+require 'tempfile'
 require 'github/markup'
 
-module Markview
-  class Application < Sinatra::Base    
-    dir = File.dirname(File.expand_path(__FILE__))
-    
-    set :views,  "#{dir}/markview/views"
-    set :public, "#{dir}/markview/public"
-    set :static, true
-        
-    # Renders the html using GitHub::Markup
-    def self.markview_me
-      ARGV[0] ||= Dir.glob("README*")[0]
-      begin
-        GitHub::Markup.render(ARGV[0], File.read(ARGV[0]))
-      rescue Errno::ENOENT
-        raise LoadError, "Failed to open document. Please specify a file."; exit
-      end
-    end
+class Markview < Sinatra::Base
+  dir = File.dirname(File.expand_path(__FILE__))
 
-    get '/' do
-      @markdown = Markview::Application.markview_me
-      @title = ARGV[0].gsub(/(.+\/)?/, '') # /path/to/README.txt => README.txt
-      erb :base
+  set :views,  "#{dir}/markview/views"
+  set :public, "#{dir}/markview/public"
+  set :static, true
+
+  before do
+    @@markup = ARGV[0] ||= Dir.glob("README*")[0]
+    unless File.file?(@@markup)
+      raise LoadError, "Failed to open document. Please specify a file."; exit!
     end
-  end   
+  end
+
+  # Renders the html using GitHub::Markup
+  def self.render
+    GitHub::Markup.render(@@markup, File.read(@@markup))
+  end
+
+  get '/' do
+    @markdown = Markview.render
+    @title = File.basename(@@markup)
+    erb :base, :layout => true
+  end
+
+  get '/edit' do
+    @markdown = File.read(@@markup)
+    @title = File.basename(@@markup)
+    erb :edit, :layout => true
+  end
+
+  post '/save' do
+    
+  end
+
 end
+
