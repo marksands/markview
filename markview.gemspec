@@ -11,7 +11,9 @@ Gem::Specification.new do |gemspec|
    	'bin/markview',
    	'lib/markview.rb',
    	'lib/markview/public/style.css',
+   	'lib/markview/public/jquery.notifyBar.css',
    	'lib/markview/public/app.js',
+   	'lib/markview/public/jquery.notifyBar.js',
    	'lib/markview/views/base.erb',
    	'lib/markview/views/layout.erb',
    	'lib/markview/views/edit.erb',
@@ -27,11 +29,12 @@ Gem::Specification.new do |gemspec|
   gemspec.add_dependency( 'sinatra', '>=0.9.4' )
   gemspec.add_dependency( 'github-markup', '>=0.2.2')
   gemspec.add_dependency( 'rdiscount', '>=1.6.3')
+  gemspec.add_dependency( 'json', '>=1.4.6')
 
   gemspec.add_development_dependency('contest', '>=0.1.2')
   gemspec.add_development_dependency('turn', '>=0.7.0')
 	gemspec.add_development_dependency('rack-test', '>=0.5.3')
-  
+
   gemspec.rubyforge_project = 'markview'
   gemspec.rubygems_version = '0.3.0'
 end

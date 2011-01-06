@@ -1,6 +1,6 @@
 $:.unshift File.expand_path(File.dirname(__FILE__) + '/lib')
 require 'sinatra'
-require 'tempfile'
+require 'json'
 require 'github/markup'
 
 class Markview < Sinatra::Base
@@ -25,19 +25,19 @@ class Markview < Sinatra::Base
   get '/' do
     @markdown = Markview.render
     @title = File.basename(@@markup)
-    erb :base, :layout => true
+    erb :base
   end
 
   get '/edit' do
     @markdown = File.read(@@markup)
     @title = File.basename(@@markup)
-    erb :edit, :layout => true
+    erb :edit
   end
 
   post '/save' do
+    return ({:error => true, :message => "Failed to save file!"}).to_json unless request['markup']
     File.open(@@markup, 'w') { |f| f.write(request['markup']) }
     ({:error => false, :message => "File succesfully saved!"}).to_json
   end
 
 end
-
