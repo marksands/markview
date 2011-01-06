@@ -31,7 +31,6 @@ Gem::Specification.new do |gemspec|
   gemspec.add_dependency( 'json', '>=1.4.6')
 
   gemspec.add_development_dependency('contest', '>=0.1.2')
-  gemspec.add_development_dependency('turn', '>=0.7.0')
   gemspec.add_development_dependency('rack-test', '>=0.5.3')
 
   gemspec.rubyforge_project = 'markview'

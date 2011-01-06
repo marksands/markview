@@ -14,6 +14,14 @@
     <div id="content" class="clear">
       <p id="file"><%= @title %></p>
 
+      <div class="meta">
+        <ul>
+          <li><a id="edit" href="#">edit</a></li>
+          <li class="last"><a id="save" href="#">save</a></li>
+          <li class="last"><a id="preview" href="#">preview</a></li>
+        </ul>
+      </div>
+
       <%= yield %>
 
     </div>
