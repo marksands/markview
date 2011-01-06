@@ -28,10 +28,14 @@ class Markview < Sinatra::Base
     erb :base
   end
 
+  get '/preview' do
+    @markdown = Markview.render
+    ({:error => false, :data => @markdown}).to_json
+  end
+
   get '/edit' do
     @markdown = File.read(@@markup)
-    @title = File.basename(@@markup)
-    erb :edit
+    ({:error => false, :data => "<textarea id='editbox'>#{@markdown}</textarea>"}).to_json
   end
 
   post '/save' do
