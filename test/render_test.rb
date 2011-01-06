@@ -13,9 +13,11 @@ class RenderTest
 
   test "no markdown file given or found raises error" do
     bad_file
-    assert_raises LoadError do
-      Markview.render
-    end
+    Proc.new {
+      assert_raise LoadError do
+        require 'markview.rb'
+      end
+    }
   end
 
   test "on GET to root" do
@@ -24,8 +26,3 @@ class RenderTest
   end
 
 end
-
-# test "renders given file" do
-#   GitHub::Markup.render(@argv, File.read(@argv)).should_equal 
-#     Markview::Application.markview_me
-# end
