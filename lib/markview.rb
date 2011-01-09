@@ -12,9 +12,9 @@ class Markview < Sinatra::Base
 
   configure do
     @@markup = ARGV[0] ||= Dir.glob("README*")[0]
-    if !@@markup.nil?
+    if !@@markup.nil? && !File.file?(@@markup)
       File.new(@@markup, "w+")
-    else
+    elsif !File.file?(@@markup)
       raise LoadError, "Failed to find suitable file in current working directory!"; exit!
     end
   end
